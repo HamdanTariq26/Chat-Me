@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*****************************************************************************
+ * UNIVERSAL WHATSAPP-LIKE QSS
+ *****************************************************************************/
+
+/* -------------------- BASE WIDGET -------------------- */
+QWidget {
+    font-family: &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+    font-size: 10pt;
+    color: #34495e; /* Dark text color */
+    background-color: #f8f8f8; /* Very light background for general areas */
+}
+
+/* Main Window / Chat Area */
+QMainWindow, QWidget#chatView { 
+    background-color: #ece5dd; /* WhatsApp off-white/beige */
+}
+
+/* -------------------- TITLE BAR / HEADER -------------------- */
+QWidget#customTitleBar { 
+    background-color: #075e54; /* WhatsApp Header Green */
+    color: white; 
+    border-bottom: 2px solid #128c7e;
+    border-left: 1px solid #128c7e;
+    border-right: 1px solid #128c7e;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 5px 10px;
+}
+
+QLabel#titleLabel {
+    color: white;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+/* -------------------- FRAMES -------------------- */
+QFrame#panelWidget, QFrame#frame_2 {
+    background-color: rgba(255, 255, 255, 0.98);
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+}
+
+/* -------------------- LABELS -------------------- */
+QLabel {
+    font-weight: 500;
+    color: #333333;
+    font-size: 14px;
+}
+
+/* -------------------- LINE EDITS / TEXT EDITS -------------------- */
+QLineEdit, QTextEdit {
+    padding: 8px 12px;
+    border: 1px solid #dcdcdc; 
+    border-radius: 3px;
+    background-color: #ffffff;
+    color: #000000;
+    selection-background-color: #128c7e;
+}
+
+/* Message input rounded bar */
+QLineEdit#messageInput { 
+    border-radius: 20px; 
+    padding: 8px 15px;
+    border: none;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+QLineEdit:focus, QTextEdit:focus {
+    border: 1px solid #25d366; /* Bright green focus highlight */
+}
+
+/* -------------------- CHECKBOXES -------------------- */
+QCheckBox {
+    background: transparent;
+    font-size: 13px;
+    color: #333333;
+    spacing: 5px;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    background: #ffffff;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #128c7e; /* Needed for Qt to register click */
+    border: 1px solid #075e54;
+}
+
+/* -------------------- PUSH BUTTONS -------------------- */
+/* General Buttons */
+QPushButton {
+    background-color: #128c7e; /* Medium Teal Green */
+    color: white;
+    border: none;
+    padding: 8px 16px;           
+    border-radius: 18px;          /* More rounded, pill-like */
+    font-weight: bold;
+    min-height: 32px;             
+    max-height: 36px;
+}
+
+QPushButton:hover {
+    background-color: #075e54; 
+}
+
+QPushButton:pressed {
+    background-color: #075e54;
+}
+
+/* FILE Button (icon button) */
+QPushButton#fileButton {
+    background-color: transparent; 
+    color: #777; 
+    border: none;
+    min-width: 30px; max-width: 30px;
+    min-height: 30px; max-height: 30px;
+    border-radius: 15px;
+}
+
+QPushButton#fileButton:hover {
+    background-color: #e0e0e0;
+}
+
+/* SEND Button (Circular, Bright Green) */
+QPushButton#sendButton {
+    background-color: #25d366; 
+    color: white; 
+    border: none;
+    border-radius: 20px; 
+    min-width: 40px; max-width: 40px;
+    min-height: 40px; max-height: 40px;
+    padding: 0;
+}
+
+QPushButton#sendButton:hover {
+    background-color: #1aae55; 
+}
+
+QPushButton#sendButton:pressed {
+    background-color: #128c7e;
+}
+
+/*****************************************************************************
+ * USERS AREA (Contacts / Sidebar)
+ *****************************************************************************/
+
+/* Container background */
+QTreeWidget#usersAreaListWidget {
+    background-color: #ffffff;  /* WhatsApp sidebar white */
+    border: none;
+    header-visible: false; 
+    show-decoration-selected: 0;
+}
+
+/* Individual user items */
+QTreeWidget::item {
+    height: 60px;               /* Space for avatar + text */
+    padding: 5px 10px;
+    border-bottom: 1px solid #eee; /* Subtle separator line */
+}
+
+/* Selected user */
+QTreeWidget::item:selected {
+    background-color: #dcf8c6; /* Light WhatsApp green */
+    color: #34495e;            /* Dark text */
+    outline: none;
+}
+
+/* Selected but not active */
+QTreeWidget::item:selected:!active {
+    background-color: #f0f0f0;
+    color: #34495e;
+}
+
+/*****************************************************************************
+ * CHAT AREA (Messages)
+ *****************************************************************************/
+
+/* Chat container */
+QListWidget#chatAreaListWidget {
+    background-color: #ece5dd; /* WhatsApp chat beige */
+    border: none;
+}
+
+/* Individual message bubbles */
+QListWidget::item {
+    background: transparent;
+    border: none;
+    padding: 5px 10px; /* Space between messages */
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="4,1">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QListWidget" name="chatAreaListWidget"/>
+      </item>
+      <item>
+       <widget class="QListWidget" name="usersAreaListWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0">
+      <item>
+       <widget class="QPushButton" name="sendMsgPushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Send</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="filePushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>File</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="MsgLineEdit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>300</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <widget class="QMenu" name="menuAbout">
+     <property name="title">
+      <string>About</string>
+     </property>
+     <addaction name="actionOne_lone_coder"/>
+     <addaction name="actionC"/>
+     <addaction name="actionAsio"/>
+     <addaction name="actionQt"/>
+     <addaction name="actionInstructor"/>
+     <addaction name="actionProject"/>
+    </widget>
+    <addaction name="actionSend_a_broadcast"/>
+    <addaction name="menuAbout"/>
+   </widget>
+   <addaction name="menuOptions"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSend_a_broadcast">
+   <property name="text">
+    <string>Send a Broadcast</string>
+   </property>
+  </action>
+  <action name="actionOne_lone_coder">
+   <property name="text">
+    <string>Onelone coder</string>
+   </property>
+  </action>
+  <action name="actionC">
+   <property name="text">
+    <string>C++</string>
+   </property>
+  </action>
+  <action name="actionAsio">
+   <property name="text">
+    <string>Asio</string>
+   </property>
+  </action>
+  <action name="actionQt">
+   <property name="text">
+    <string>Qt</string>
+   </property>
+  </action>
+  <action name="actionInstructor">
+   <property name="text">
+    <string>Instructor</string>
+   </property>
+  </action>
+  <action name="actionProject">
+   <property name="text">
+    <string>Project</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
