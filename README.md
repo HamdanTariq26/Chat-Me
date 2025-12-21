@@ -22,7 +22,18 @@ This project was developed as part of a university team assignment, with most im
 - Real-time LAN chat between multiple clients  
 - File transfer support between clients  
 - Client-server architecture with asynchronous networking  
-- Cross-platform build with C++17 and ASIO  
+- Cross-platform build with C++17 and ASIO
+  
+---
+
+## Screenshots
+
+Here are some screenshots of the **LAN Chat App with File Transfer** in action:
+
+| Main Chat Window | File Transfer | Multi-Client View |
+|-----------------|--------------|-----------------|
+| ![Main Chat Window](assets/chat_window.png) | ![File Transfer](assets/file_transfer.png) | ![Multi-Client View](assets/multi_client.png) |
+
 
 ---
 
