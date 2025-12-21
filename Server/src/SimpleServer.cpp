@@ -8,8 +8,8 @@
 
    Distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND.
    
-   File: [Insert filename]
-   Description: [Brief description of this file]
+   File: SimpleServer.cpp
+   Description: Implements the server component of the LAN Chat App, handling client connections, message routing, and file transfer management.
 */
 
 #include <iostream>
@@ -329,5 +329,6 @@ int main()
 
 	return 0;
 }
+
 
 
