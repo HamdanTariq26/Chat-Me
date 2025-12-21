@@ -32,7 +32,7 @@ Here are some screenshots of the **LAN Chat App with File Transfer** in action:
 
 | Main Chat Window | File Transfer | Multi-Client View |
 |-----------------|--------------|-----------------|
-| ![Screenshot](screenshot/Screenshot%202025-12-21%20221532.png) | ![File Transfer](assets/file_transfer.png) | ![Multi-Client View](assets/multi_client.png) |
+| ![Screenshot](screenshot/Screenshot%202025-12-21%20221532.png) | ![Server]() | ![Multi-Client View](screenshot/Screenshot%202025-12-21%20221815.png) |
 
 
 ---
