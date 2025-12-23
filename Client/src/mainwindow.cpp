@@ -1,3 +1,16 @@
+/*
+   © 2025 Hamdan Tariq
+
+   LAN Chat App with File Transfer
+
+   Licensed under the Apache License, Version 2.0.
+   You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+   Distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND.
+   
+   File: mainwindow.cpp
+   Description: 
+*/
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "pch.h"
@@ -386,5 +399,6 @@ void MainWindow::on_actionProject_triggered()
                        "and user interface design to create a professional-grade local chat application, suitable for both learning and practical usage.");
 
 }
+
 
 
