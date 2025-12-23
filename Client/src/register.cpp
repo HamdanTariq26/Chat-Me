@@ -1,3 +1,16 @@
+/*
+   © 2025 Hamdan Tariq
+
+   LAN Chat App with File Transfer
+
+   Licensed under the Apache License, Version 2.0.
+   You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+   Distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND.
+   
+   File: register.cpp
+   Description: 
+*/
 #include "register.h"
 #include "ui_register.h"
 #include "pch.h"
@@ -77,5 +90,6 @@ void Register::onRegisterationTry(bool wasSuccessful)
     }
 
 }
+
 
 
