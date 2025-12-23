@@ -67,7 +67,9 @@ private:
     bool alerted = false;
     ClientDiscovery m_discovery;
     QString ip;
+    std::atomic_bool m_connectedOnce = false;
 };
 
 #endif // CLIENT_H
+
 
