@@ -9,11 +9,18 @@ Client::Client(QObject *parent)
 
 {
     connect(&m_discovery, &ClientDiscovery::serverFound, this, [this](QString ip1) {
+        if (m_connectedOnce.exchange(true))
+            return;
+
         qDebug() << "Found server at:" << ip1;
         ip = ip1;
-        Connect(ip.toStdString(), 60000);  // Connect here, after discovery
-        std::thread t([this]() { this->process(); });
-        t.detach();
+
+        if (!Connect(ip.toStdString(), 60000)) {
+            m_connectedOnce = false;
+            return;
+        }
+
+        std::thread([this]() { this->process(); }).detach();
     });
 }
 
@@ -285,3 +292,4 @@ void Client::SendMsgToEveryone(std::string msg)
     broadcast << msg;
     Send(broadcast);
 }
+
