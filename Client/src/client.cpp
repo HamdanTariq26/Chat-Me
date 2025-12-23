@@ -1,7 +1,19 @@
+/*
+   © 2025 Hamdan Tariq
+
+   LAN Chat App with File Transfer
+
+   Licensed under the Apache License, Version 2.0.
+   You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+   Distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND.
+   
+   File: client.cpp
+   Description: 
+*/
+
 #include "client.h"
 #include "pch.h"
-
-
 
 
 Client::Client(QObject *parent)
@@ -292,4 +304,5 @@ void Client::SendMsgToEveryone(std::string msg)
     broadcast << msg;
     Send(broadcast);
 }
+
 
